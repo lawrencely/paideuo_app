@@ -1,3 +1,12 @@
+# == Route Map
+#
+# You don't have any routes defined!
+#
+# Please add some routes in config/routes.rb.
+#
+# For more information about routes, see the Rails guide: http://guides.rubyonrails.org/routing.html.
+#
+
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
