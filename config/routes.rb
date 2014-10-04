@@ -30,14 +30,47 @@
 #
 
 Rails.application.routes.draw do
-  resources :users, :sessions, :pages
 
   root to: 'pages#home'
 
-  get '/users/new'=> 'users#new'
+  get '/users/edit' => 'users#edit', :as => :edit_user
+  resources :users, :sessions, :pages, :except => [:edit]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/login' => 'sessions#destroy'
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
