@@ -11,7 +11,7 @@ Category.destroy_all
 Task.destroy_all
 Partner.destroy_all
 
-u1 = User.create(:name => 'Rebecca', :email => 'rebeccastyu@gmail.com', :password_digest => 'papparich')
+u1 = User.create(:name => 'Rebecca', :email => 'rebeccastyu@gmail.com', :password => 'papparich')
 #u2 = User.create(:name => 'Eryn-Jane')
 #u3 = User.create(:name => 'Lawrence')
 
