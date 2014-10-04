@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+  <div class="container">
+    <ul>
+      <li><%= link_to('Home', root_path) %></li>
+      <%== intellinav %>
+    </ul>
+  </div>
+</nav>
 
-<%= yield %>
-
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>
