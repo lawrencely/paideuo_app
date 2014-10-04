@@ -17,7 +17,10 @@ class User < ActiveRecord::Base
   has_many :categories
   has_many :tasks, :through => :categories
 
-  validates :name, :presence => true, :uniqueness => true, :length => {:minimum => 2}
+  validates :name, :presence => true, :uniqueness => true, :length => { :in => 3..20}
   validates :email, :presence => true, :uniqueness => true
+  validates_length_of :password, :in => 6..20, :on => :create
+
 
 end
+
