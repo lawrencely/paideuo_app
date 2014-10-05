@@ -8,12 +8,20 @@
     <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
 
     <%= f.submit :Signup %>
+    <p><%=  flash[:notice] = "You signed up succesfully" %></p>
+    <p><%=  flash[:color] = "valid" %></p>
+
   <% end %>
   <% if @user.errors.any? %>
     <ul class="Signup_Errors">
     <% for message_error in @user.errors.full_messages %>
       <li>* <%= message_error %></li>
+    <p><%=  flash[:notice] = "Form is invalid" %></p>
+    <p><%=  flash[:color] = "invalid" %></p>
+
     <% end %>
     </ul>
   <% end %>
 </div>
+
+

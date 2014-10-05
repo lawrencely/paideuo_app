@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @task = Task.where :category_id => @current_user.tasks.category_id
   end
 
   def new
@@ -10,8 +10,9 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new task_params
-    if @task.save
-      redirect_to tasks_path
+    if @task.category_id = params[:category_id]
+      @task.save
+      redirect_to category_tasks_path(@task.id)
     else
       raise 'error'
     end
