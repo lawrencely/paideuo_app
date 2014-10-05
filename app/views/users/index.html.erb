@@ -2,7 +2,7 @@
 <ul>
   <% @users.each do |user| %>
   <li><%= link_to user.name, user %></li>
-  <li>Image Here:<%= user.image %></li>
+  <li>Image Here:<%= image_tag user.image %></li>
   <li>Email here: <%= user.email  %></li>
   <li>Password: <%= user.password_digest %></li>
   <% end %>
