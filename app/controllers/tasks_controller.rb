@@ -1,7 +1,12 @@
 class TasksController < ApplicationController
 
   def index
-    @task = Task.where :category_id => @current_user.tasks.category_id
+    @tasks = Task.where :category_id => id_hope
+    if @tasks.present?
+    redirect_to category_tasks_path
+  else
+    raise 'error'
+  end
   end
 
   def new
@@ -35,6 +40,12 @@ class TasksController < ApplicationController
   private
   def task_params
     params.require(:task).permit(:paideuo, :category_id, :partner_id, :datetime)
+  end
+  def id_hope
+    @current_user.tasks.each do |p|
+      raise 'error'
+      p.id
+    end
   end
 
 end
