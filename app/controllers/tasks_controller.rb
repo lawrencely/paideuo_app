@@ -10,10 +10,10 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new task_params
-    if @task.save
-      redirect_to tasks_path
+    if @task.category_id == @current_category
+      @task.save
     else
-      render :new
+      raise 'error'
     end
   end
 

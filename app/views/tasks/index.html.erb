@@ -1,1 +1,10 @@
-index.html.erb
+<h2>Tasks in category</h2>
+<ul>
+  <li><% @tasks.each do |task| %></li>
+  <li>Paideuo<%= task.paideuo %></li>
+  <br>
+  <li>Date Time<%= task.datetime %></li>
+  <br>
+  <li>Parnter <%= task.partner_id %></li>
+  <% end %>
+</ul>

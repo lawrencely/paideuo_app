@@ -2,6 +2,8 @@
   <h2>Create Category</h2>
 <%= form_for(:category, :url => {:controller => 'categories', :action => 'create'}) do |f| %>
 <p>Category Heading:<br> <%= f.text_field :heading %></p>
-<button>Create Category</button>
+
+<%= f.submit %>
+
 <% end %>
 </div>
