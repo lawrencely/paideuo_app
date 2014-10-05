@@ -1,10 +1,11 @@
 <h2>All Categories</h2>
-<ul>
-  <% @categories.each do |category| %>
+  <ul>
+
+  <% @category.each do |category| %>
   <li><%= category.heading %></li>
   <br>
   <li><%= link_to(category.tasks, category) %></li>
-<button>View</button>
-<% end %>
- </ul>
+  <% end%>
+  <button>View</button>
+</ul>
 
