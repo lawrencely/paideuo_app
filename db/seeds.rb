@@ -11,9 +11,9 @@ Category.destroy_all
 Task.destroy_all
 Partner.destroy_all
 
-u1 = User.create(:name => 'Rebecca', :email => 'rebeccastyu@gmail.com', :password => 'papparich')
-#u2 = User.create(:name => 'Eryn-Jane')
-#u3 = User.create(:name => 'Lawrence')
+u1 = User.create(:name => 'Sunni', :email => 'sunni@gmail.com', :password => 'sunnisunni')
+u2 = User.create(:name => 'Eryn-Jane', :email => 'sunni@gmail.com', :password => 'sunnisunni')
+u3 = User.create(:name => 'Lawrence', :email => 'lawrence@gmail.com', :password => 'lawrence')
 
 c1 = Category.create(:heading => 'Studying')
 c2 = Category.create(:heading => 'Prep for HSC')
