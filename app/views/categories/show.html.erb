@@ -1,19 +1,9 @@
-<h2>Your Categories and tasks:</h2>
+<h2>Your Current Categories:</h2>
 
-<h2>Tasks in category</h2>
-<ul>
-  <li><% @current_user.categories.each do |category| %></li>
-  <br>
-    <li><%= category.heading %></li>
-    <% category.tasks.each do |task| %>
-    <li>Task:   <%= task.paideuo %></li>
-    <li>Date Time:   <%= task.datetime %></li>
-    <li>Partner:   <%= task.partner_id %></li>
-    <br>
-</ul>
-    <% end %>
-  <% end %>
-
+<%= @category.heading %>
+<% @tasks.each do |task| %>
+<p><%= task.paideuo %></p>
+<% end %>
 
 <h2>Add task to this cateogry</h2>
 

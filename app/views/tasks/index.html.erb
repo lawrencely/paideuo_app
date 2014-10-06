@@ -1,13 +1,8 @@
 <h2>Tasks in category</h2>
 <ul>
-  <li><% @current_user.categories.each do |category| %></li>
-  <br>
-    <li><%= category.heading %></li>
-    <% category.tasks.each do |task| %>
-    <li>Task:   <%= task.paideuo %></li>
-    <li>Date Time:   <%= task.datetime %></li>
-    <li>Partner:   <%= task.partner_id %></li>
-    <br>
-</ul>
-    <% end %>
+  <%  @category = params[:category_id] %>
+  <% @tasks = Task.where :id => @category %>
+  <li><% @tasks.each do |task| %></li>
+  <li><%= task.paideuo %></li>
   <% end %>
+</ul>
