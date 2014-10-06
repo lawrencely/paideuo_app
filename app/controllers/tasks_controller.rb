@@ -34,13 +34,15 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task = @current_task
+    task = Task.find params[:id]
+    category = Category.find params[:category_id]
     task.destroy
-    redirect_to tasks_path
+    redirect_to category_task_path(category,task)
   end
 
   def show
     @tasks = Task.where :category_id => params[:id]
+    @category = Category.find params[:category_id]
   end
 
   private

@@ -3,7 +3,8 @@
 <%= @category.heading %>
 <% @tasks.each do |task| %>
 
-<p><%= task.paideuo %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %></p>
+<p><%= task.paideuo %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
+<%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %></p>
 <% end %>
 
 <h2>Add task to this cateogry</h2>

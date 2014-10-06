@@ -1,1 +1,5 @@
-show.html.erb
+<h2>Tasks Show page</h2>
+<p><%= @category.heading %></p>
+<% @category.tasks.each do |task| %>
+<p><%= task.paideuo %></p>
+<% end %>
