@@ -25,6 +25,9 @@ class TasksController < ApplicationController
     @task = @current_task
   end
 
+  def update
+  end
+
   def destroy
     task = @current_task
     task.destroy

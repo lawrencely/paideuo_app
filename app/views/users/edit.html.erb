@@ -2,7 +2,8 @@
   Editing
   <%= @user.name %>
 </h2>
-<%= form_for @user do |f| %>
+<%= form_for(@user, :url => {:action => 'update', :id => @user.id}) do |f| %>
+
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
