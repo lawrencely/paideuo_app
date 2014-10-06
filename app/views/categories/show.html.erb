@@ -3,7 +3,7 @@
 <%= @category.heading %>
 <% @tasks.each do |task| %>
 
-<p><%= task.paideuo %> <%= link_to('edit', category_task_path(@category.id, task.id)) %></p>
+<p><%= task.paideuo %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %></p>
 <% end %>
 
 <h2>Add task to this cateogry</h2>

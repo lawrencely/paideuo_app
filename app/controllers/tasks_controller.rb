@@ -22,10 +22,15 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = @current_task
+    @category = Category.find params[:category_id]
+    @task = Task.find params[:id]
   end
 
   def update
+    task = Task.find params[:id]
+    @category = Category.find params[:category_id]
+    task.update task_params
+    redirect_to category_path(@category)
   end
 
   def destroy
