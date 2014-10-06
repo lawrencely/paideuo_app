@@ -2,10 +2,11 @@
   <ul>
 
   <% @category.each do |category| %>
-  <li><%= category.heading %></li>
   <br>
   <li><%= link_to(category.heading, category) %></li>
   <% end%>
   <button>View</button>
 </ul>
+
+
 

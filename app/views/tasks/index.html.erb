@@ -1,13 +1,13 @@
 <h2>Tasks in category</h2>
 <ul>
-  <li><% @tasks.each do |task| %></li>
-  <li>Task: <br> <%= task.paideuo %></li>
+  <li><% @current_user.categories.each do |category| %></li>
   <br>
-  <li>Date Time: <br> <%= task.datetime %></li>
-  <br>
-  <li>Partner: <br> <%= task.partner_id %></li>
-    <%=   raise 'error' %>
-
-
-  <% end %>
+    <li><%= category.heading %></li>
+    <% category.tasks.each do |task| %>
+    <li>Task:   <%= task.paideuo %></li>
+    <li>Date Time:   <%= task.datetime %></li>
+    <li>Partner:   <%= task.partner_id %></li>
+    <br>
 </ul>
+    <% end %>
+  <% end %>

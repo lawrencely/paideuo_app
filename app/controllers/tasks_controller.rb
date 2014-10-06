@@ -1,12 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.where :category_id => id_hope
-    if @tasks.present?
-    redirect_to category_tasks_path
-  else
-    raise 'error'
-  end
+    @tasks = Task.all
   end
 
   def new
@@ -43,7 +38,6 @@ class TasksController < ApplicationController
   end
   def id_hope
     @current_user.tasks.each do |p|
-      raise 'error'
       p.id
     end
   end

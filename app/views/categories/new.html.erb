@@ -1,5 +1,11 @@
 <div class="Category_form">
-  <h2>Create Category</h2>
+
+<h2>Current Categories</h2>
+<% @current_user.categories.each do |category| %>
+<%= category.heading %>
+<% end %>
+
+<h2>Create Category</h2>
 <%= form_for(:category, :url => {:controller => 'categories', :action => 'create'}) do |f| %>
 <p>Category Heading:<br> <%= f.text_field :heading %></p>
 <%= f.submit %>
