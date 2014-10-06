@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/users/edit' => 'users#edit', :as => :edit_user
+
   resources :users, :categories, :tasks, :sessions, :pages, :except => [:edit]
 
   get '/login' => 'sessions#new'

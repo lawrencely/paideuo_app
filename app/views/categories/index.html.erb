@@ -3,7 +3,8 @@
 
   <% @category.each do |category| %>
   <br>
-  <li><%= link_to(category.heading, category) %></li>
+  <li><%= link_to(category.heading, category) %>    <%= link_to( 'edit', edit_category_path(category.id)) %></li>
+
   <% end%>
   <button>View</button>
 </ul>

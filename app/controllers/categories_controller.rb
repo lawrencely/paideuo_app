@@ -1,11 +1,11 @@
 class CategoriesController < ApplicationController
 
   def index
-    if @current_user.present?
-    @category = Category.where :user_id => @current_user.id
-  else
-    redirect_to root_path
-  end
+      if @current_user.present?
+      @category = Category.where :user_id => @current_user.id
+    else
+      redirect_to root_path
+    end
   end
 
   def new
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = @current_category
+    @category = Category.find params[:id]
   end
 
   def destroy
@@ -34,9 +34,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    category = Category.find params[:id]
-    @current_user
-
+    category = Category.find params[:category_id]
    if   @current_user.id == category.user_id
         category.update category_params
         redirect_to category_path
@@ -48,7 +46,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find params[:id]
     @tasks = Task.where :category_id => params[:id]
-
   end
 
   private

@@ -1,1 +1,7 @@
-edit.html.erb
+<h2>Edit Category</h2>
+
+<h2>Create Category</h2>
+<%= form_for(@category, :url => { :action => 'update',:controller => 'categories', :id => @category.id}) do |f| %>
+<p>Category Heading:<br> <%= f.text_field :heading %></p>
+<%= f.submit %>
+<% end %>
