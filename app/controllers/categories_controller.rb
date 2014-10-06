@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    category = Category.find params[:category_id]
+    category = Category.find params[:id]
    if   @current_user.id == category.user_id
         category.update category_params
         redirect_to category_path
