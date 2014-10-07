@@ -20,7 +20,7 @@
   padding: 20px;
   text-align:center; /* center horizontally */
   /*vertical-align:middle;*/ /* center vertically */
-ul {
+/*ul {
   padding: 0;
 
 }
@@ -36,6 +36,7 @@ ul li {
 body {
   height: 100%;
 }
+
 .container {
   max-width: 960px;
   margin: auto;
@@ -43,9 +44,8 @@ body {
 
 .home-page-block {
   max-width: 250px;
-  border: 3px solid lightgrey;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
 
-}
+}*/

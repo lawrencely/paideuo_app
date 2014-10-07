@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @current_user = @user
     @user = User.new user_params
     if @user.save
+      UserSignUpNotification.welcome_email(@user).deliver
       flash[:notice] = "You signed up succesfully"
       flash[:color] = "valid"
       session[:user_id] = @user.id
