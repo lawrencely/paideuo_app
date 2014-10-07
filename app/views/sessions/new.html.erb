@@ -1,11 +1,16 @@
 <%= form_tag '/login' do %>
 
-<%= label_tag :username or email %>
+<div id="login_block">
+  <%= label_tag :username or email %>
   <%= text_field_tag :username, nil, :autofocus => true %>
-<%= label_tag :password %>
+  <%= label_tag :password %>
   <%= password_field_tag :password %>
-<%= submit_tag 'Login' %>
-<p><%=  flash[:notice] = "You signed up succesfully" %></p>
-<p><%=  flash[:color] = "valid" %></p>
+  <%= submit_tag 'Login' %>
+  <p><%=  flash[:notice] = "You signed up succesfully" %></p>
+  <p><%=  flash[:color] = "valid" %></p>
+  <% end %>
+</div>
 
-<% end %>
+
+
+

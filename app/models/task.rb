@@ -13,4 +13,6 @@
 
 class Task < ActiveRecord::Base
   belongs_to :category
+  validates :paideuo, :presence => true, :uniqueness => true, :length => { :in => 3..20}
+  validates :datetime, :presence => true
 end

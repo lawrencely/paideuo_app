@@ -3,12 +3,15 @@
 <%= @category.heading %>
 <% @tasks.each do |task| %>
 
-<p><%= task.paideuo %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
-<%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %></p>
+  <p>
+      <%= task.paideuo %> <%= time_ago_in_words task.datetime if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
+      <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
+  </p>
 <% end %>
 
 <h2>Add task to this cateogry</h2>
 
 <%= link_to('Add Task', new_category_task_path(@category.id))  %>
 
+#first_or_create
 

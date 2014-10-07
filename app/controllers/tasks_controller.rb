@@ -13,7 +13,9 @@ class TasksController < ApplicationController
   def create
     @task = Task.new task_params
     @category = params[:category_id]
+    @partner = Partner.where(email: :email).first_or_create partner_params
     if @task.category_id = params[:category_id]
+      @task.partner_id = @partner.id
       @task.save
       redirect_to category_path(@category)
     else
@@ -37,7 +39,7 @@ class TasksController < ApplicationController
     task = Task.find params[:id]
     category = Category.find params[:category_id]
     task.destroy
-    redirect_to category_task_path(category,task)
+    redirect_to category_path(category)
   end
 
   def show
@@ -49,6 +51,11 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:paideuo, :category_id, :partner_id, :datetime)
   end
+
+  def partner_params
+    params.require(:partner).permit(:name, :email)
+  end
+
   def id_hope
     @current_user.tasks.each do |p|
       p.id
