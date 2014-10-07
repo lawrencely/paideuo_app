@@ -40,3 +40,12 @@ body {
   max-width: 960px;
   margin: auto;
 }
+
+.home-page-block {
+  max-width: 250px;
+  border: 3px solid lightgrey;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+
+}

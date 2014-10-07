@@ -13,14 +13,14 @@ class TasksController < ApplicationController
   def create
     @task = Task.new task_params
     @category = params[:category_id]
-    @partner = Partner.where(email: :email).first_or_create partner_params
-    if @task.category_id = params[:category_id]
-      @task.partner_id = @partner.id
-      @task.save
-      redirect_to category_path(@category)
-    else
-      raise 'error'
-    end
+    @partner = Partner.where(email: params[:partner][:email]).first_or_create partner_params
+    @task.category_id = params[:category_id]
+    @task.partner_id = @partner.id
+      if @task.save
+        redirect_to category_path(@category)
+      else
+        render :new
+      end
   end
 
   def edit

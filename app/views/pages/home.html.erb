@@ -1,15 +1,19 @@
 This is the home page
+  <% if @current_user.present? %>
+    <% @current_user.categories.each do |category | %>
+    <div class="home-page-block">
+    <h3>Categories</h3>
+    <h5><%= category.heading %></h5>
+    <h3>Tasks</h3>
+    <% category.tasks.each do |task| %>
+    <p><%= task.paideuo %></p>
+    <% end %>
+    </div>
 
-<% if @current_user.present? %>
-  <% @current_user.categories.each do |category | %>
-  <h3>Categories</h3>
-  <h2><%= category.heading %></h2>
-  <h3>Tasks</h3>
-  <% category.tasks.each do |task| %>
-  <p><%= task.paideuo %></p>
-  <% end %>
-  <% end %>
-<% else %>
-<p>Please Sign up or login</p>
+    <% end %>
 
-<% end %>
+  <% else %>
+  <p>Please Sign up or login</p>
+
+
+  <% end %>
