@@ -62,4 +62,8 @@ class TasksController < ApplicationController
     end
   end
 
+  def mail_notification
+    Mail.deliver
+  end
+
 end
