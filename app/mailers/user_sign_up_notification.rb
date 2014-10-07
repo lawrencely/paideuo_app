@@ -3,7 +3,7 @@ class UserSignUpNotification < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    @url = 'https://www.google.com'
+    @url = 'http://example.co'
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 end
