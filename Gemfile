@@ -23,24 +23,38 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'spring',        group: :development
+
+gem 'rails_12factor', group: :production
+
 gem 'haml'
 gem 'bcrypt'
+gem 'geocoder' #geolocation
+gem 'forecast_io' #weather
+
+gem 'carrierwave' #file upload
+gem 'mini_magick' #resize
+gem 'cloudinary' #cloud hosting
 
 gem 'mail'
+gem 'instagram'
+gem 'httparty'
+
+gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'daemons'
 
 gem 'madmimi'
 
-gem 'dotenv'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 group :development do
   gem 'pry-rails'
   gem 'pry-debugger'
   gem 'pry-stack_explorer'
+  gem 'dotenv-rails'
+
 
   gem 'annotate'
 
@@ -50,9 +64,7 @@ group :development do
   gem 'meta_request'
 end
 
-gem 'twitter-bootstrap-rails'
 
-gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
