@@ -7,7 +7,8 @@ class UserSignUpNotification < ActionMailer::Base
     mail(to: @user.email, subject: 'Welcome')
   end
 
-  def paideuo_email(email)
-    mail(to: email, subject: 'Paideuo Time for <%= @current_user.name %>')
+  def paideuo_email(task)
+    @task = task
+    mail(to: @task.partner.email, subject: 'Paideuo Time')
   end
 end
