@@ -211,7 +211,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass
   carrierwave
   cloudinary
   coffee-rails (~> 4.0.0)
@@ -235,7 +235,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.6)
   rails_12factor
-  sass-rails (~> 4.0.3)
+  sass-rails
   sdoc (~> 0.4.0)
   spring
   turbolinks
