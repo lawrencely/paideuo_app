@@ -6,9 +6,10 @@
 #  paideuo     :text
 #  category_id :integer
 #  partner_id  :integer
-#  datetime    :date
+#  datetime    :datetime
 #  created_at  :datetime
 #  updated_at  :datetime
+#  check_sent  :boolean          default(FALSE)
 #
 
 class Task < ActiveRecord::Base

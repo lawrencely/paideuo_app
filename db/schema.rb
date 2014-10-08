@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003154146) do
+ActiveRecord::Schema.define(version: 20141008003033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20141003154146) do
     t.text     "paideuo"
     t.integer  "category_id"
     t.integer  "partner_id"
-    t.date     "datetime"
+    t.datetime "datetime"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "check_sent",  default: false
   end
 
   create_table "users", force: true do |t|
