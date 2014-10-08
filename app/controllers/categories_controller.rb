@@ -53,8 +53,10 @@ class CategoriesController < ApplicationController
     UserSignUpNotification.paideuo_email(task.partner[:email])
     # task.check_sent = true
     task.save
+  else
+    raise 'hell'
+  end
     end
-
   end
 
   private
