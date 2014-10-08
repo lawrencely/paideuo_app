@@ -6,7 +6,7 @@ This is the home page
     <h5><%= category.heading %></h5>
     <h3>Tasks</h3>
     <% category.tasks.each do |task| %>
-    <p><%= task.paideuo %><br><%= time_ago_in_words task.datetime if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %></p>
+    <p><%= task.paideuo %> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %>
     <% end %>
     </div>
 
@@ -17,3 +17,4 @@ This is the home page
 
 
   <% end %>
+
