@@ -50,7 +50,7 @@ class CategoriesController < ApplicationController
     @category = Category.find params[:id]
     @category.tasks.each do |task|
     if Time.now > task.datetime && task.check_sent == false
-    UserSignUpNotification.paideuo_email(task)
+    UserSignUpNotification.paideuo_email(task.partner)
     # task.check_sent = true
     task.save
   else
