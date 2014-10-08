@@ -15,6 +15,6 @@
 class Task < ActiveRecord::Base
   belongs_to :category
   belongs_to :partner
-  validates :paideuo, :presence => true, :length => { :in => 3..20}
+  validates :paideuo, :presence => true,
   validates :datetime, :presence => true
 end
