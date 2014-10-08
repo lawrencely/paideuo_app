@@ -7,12 +7,6 @@
       <%= task.paideuo %> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
       <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
 
-      <% if Time.now > task.datetime && task.check_sent == false %>
-      <% UserSignUpNotification.paideuo_email(task.partner[:email]) %>
-      <% task.check_sent = true %>
-      <% task.save %>
-      <% end %>
-
       <% end %>
   </p>
 
