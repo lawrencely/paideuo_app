@@ -9,6 +9,6 @@ class UserSignUpNotification < ActionMailer::Base
 
   def paideuo_email(partner)
     @partner = partner
-    mail(to: @partner.email, subject: 'Paideuo Time')
+    mail(to: @partner.email, subject: '@partner.name Paideuo Time')
   end
 end
