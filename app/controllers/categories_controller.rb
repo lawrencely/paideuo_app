@@ -49,10 +49,11 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find params[:id]
     @category.tasks.each do |task|
-    if Time.now > task.datetime && task.check_sent == false
-    UserSignUpNotification.paideuo_email(task.partner).deliver
-    task.check_sent = true
-    task.save
+      if Time.now > task.datetime && task.check_sent == false
+        UserSignUpNotification.paideuo_email(task.partner).deliver
+        task.check_sent = true
+        task.save
+      end
     end
   end
 
