@@ -25,9 +25,11 @@
   text-align:center; /* center horizontally
   /*vertical-align:middle;*/ /* center vertically */
 }
+
 ul {
   padding: 0;
 }
+
 .col-md-4 {
   border: 2em;
 }
@@ -54,9 +56,23 @@ ul li {
   margin-bottom: 100px;
 }
 
+html {
+  background: url(articwalk.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
-    /*padding-top: 80px;*/
-    max-height: 100%;
+background-color : transparent;
+
+}
+
+.home-page-words {
+background-color : transparent;
+color: white;
+
 }
 
 .container {
@@ -67,6 +83,15 @@ body {
 .main-content {
   margin-top: 120px;
 }
+
+h4 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
 .inline {
   display: inline;
   list-style-type: none;
@@ -87,6 +112,7 @@ body {
 .task-group  {
   min-height: 220px;
   margin: 1em auto;
+  opacity: 0.6;
 }
 
 
