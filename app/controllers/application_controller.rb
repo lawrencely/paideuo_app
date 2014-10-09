@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     @users = User.all
     @users.each do |user|
       user.tasks.each do |task|
-        if task.partner && task.partner.email && Time.now > task.datetime && task.check_sent == false
+        if task.partner && task.partner.email.present? && Time.now > task.datetime && task.check_sent == false
           UserSignUpNotification.paideuo_email(task.partner).deliver
           task.check_sent = true
           task.save
