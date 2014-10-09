@@ -5,24 +5,32 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <%= csrf_meta_tags %>
 </head>
 <body>
 <nav>
-  <div class="container">
-    <ul>
-      <li><%= link_to('Home', root_path) %></li>
-      <%== intellinav %>
-    </ul>
-  </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                 <li><%= link_to('Paideuó', root_path) %></li>
+                <li><%= link_to('Home', root_path) %><%== intellinav %></li>
+            </ul>
+        </div>
+    </div>
+</div>
 </nav>
 
 <div class="container">
-  <div class="row">
-
-  </div>
   <%= yield %>
 </div>
+
 </body>
 </html>

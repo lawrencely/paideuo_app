@@ -39,18 +39,23 @@ ul li {
 }
 
 body {
-  height: 100%;
+    padding-top: 80px;
+    max-height: 100%;
 }
 
 .container {
   max-width: 960px;
-  margin: auto;
 }
 
 .home-page-block {
+  background-color: #aaaaaa;
   max-width: 250px;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
-
+  border: 3px solid lightgrey;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 3em;
 }
+

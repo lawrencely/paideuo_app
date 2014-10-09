@@ -4,11 +4,11 @@ class UserSignUpNotification < ActionMailer::Base
   def welcome_email(user)
     @user = user
     @url = 'http://paideuo.herokuapp.com/login'
-    mail(to: @user.email, subject: 'Welcome')
+    mail(to: @user.email, subject: 'Welcome <%= @user.name %>')
   end
 
   def paideuo_email(partner)
     @partner = partner
-    mail(to: @partner.email, subject: '@partner.name Paideuo Time')
+    mail(to: @partner.email, subject: '<%= @partner.name %>, Paideuo Time')
   end
 end

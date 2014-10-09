@@ -1,20 +1,22 @@
-This is the home page
-  <% if @current_user.present? %>
+<% if @current_user.present? %>
+  <div class="row">
     <% @current_user.categories.each do |category | %>
-    <div class="home-page-block">
-    <h3>Categories</h3>
-    <h5><%= category.heading %></h5>
-    <h3>Tasks</h3>
-    <% category.tasks.each do |task| %>
-    <p><%= task.paideuo %> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %>
+      <div class="col-md-4">
+        <h4>Category</h4>
+        <h5><%= category.heading %></h5>
+        <h4>Tasks</h4>
+        <% category.tasks.each do |task| %>
+          <p><%= task.paideuo %><br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
+        <% end %>
+      </div>
     <% end %>
-    </div>
-
-    <% end %>
-
+  </div>
   <% else %>
-  <p>Please Sign up or login</p>
+    <div class="container">
+      <br><h1>Paideuó</h1>
+      <br>
+    <h4>Please Sign up or login</h4>
+    </div>
+<% end %>
 
-
-  <% end %>
 
