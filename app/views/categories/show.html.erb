@@ -1,20 +1,21 @@
 <h4>Category:</h4>
 <br>
-  <h4><%= @category.heading %></h4>
-  <p><% @category.tasks.each do |task| %></p>
 
-  <p>
+  <h3><%= @category.heading %></h3>
+  <h3><% @category.tasks.each do |task| %></h3>
+
+  <h3>
       <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
       <%= "ago" if task.datetime && task.datetime < Time.now  %>
       <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
       <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
-
+</h3>
       <% end %>
-  </p>
-<br>
-<br>
-<h4>Add task to this cateogry</h4>
 
-<p><%= link_to('Add Task', new_category_task_path(@category.id))  %></p>
+<br>
+<br>
+<h3>Add task to this cateogry</h3>
+
+<h4><%= link_to('Add Task', new_category_task_path(@category.id))  %></h4>
 
 
