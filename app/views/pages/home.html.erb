@@ -1,8 +1,11 @@
 <% if @current_user.present? %>
-  <div class="row">
-    <% @current_user.categories.each do |category | %>
-      <div class="col-md-4 task-group">
-        <div>
+    <div class="row">
+    <% @current_user.categories.each_with_index do |category, index| %>
+      <% if (index % 3) == 0 && index > 0 %>
+    </div><div class="row">
+      <% end %>
+      <div class="col-md-4">
+        <div class="task-group well well-lg">
           <!-- <h4>Category</h4> -->
           <h5><%= category.heading %></h5>
           <!-- <h4>Tasks</h4> -->

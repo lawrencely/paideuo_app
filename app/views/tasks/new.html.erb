@@ -1,15 +1,15 @@
 <h2>Create your task</h2>
 
 <%= form_for(:task, :url => {:controller => 'tasks', :action => 'create'}) do |f| %>
-  <p>Task name: <%= f.text_field :paideuo %></p>
-  <p>Complete by: <%= f.datetime_select :datetime %></p>
+  <p>Task name: <%= f.text_field :paideuo, class: "form-control" %></p>
+  <p>Complete by: <%= f.datetime_select :datetime, class: "form-control" %></p>
 
   <%= fields_for(:partner) do |pf| %>
     <%= pf.label :name %>
-    <%= pf.text_field :name %>
+    <%= pf.text_field :name, class: "form-control" %>
     <%= pf.label :email %>
-    <%= pf.text_field :email %>
+    <%= pf.text_field :email, class: "form-control" %>
   <% end %>
-
-  <%= f.submit %>
+<br>
+  <%= f.submit class: "btn btn-primary" %>
   <% end %>

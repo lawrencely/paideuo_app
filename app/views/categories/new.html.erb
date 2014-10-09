@@ -1,14 +1,17 @@
 <div class="Category_form">
 
-<h2>Current Categories</h2>
-<% @current_user.categories.each do |category| %>
-<%= category.heading %>
-<% end %>
+<h3>Current Categories</h3>
+<br>
+<div class="under-category">
+  <% @current_user.categories.each do |category| %>
+    <h4><%= category.heading %></h4>
+  <% end %>
+</div>
 
-<h2>Create Category</h2>
-<%= form_for(:category, :url => {:controller => 'categories', :action => 'create'}) do |f| %>
-<p>Category Heading:<br> <%= f.text_field :heading %></p>
-<%= f.submit %>
-
-<% end %>
+  <%= form_for(:category, :url => {:controller => 'categories', :action => 'create'}) do |f| %>
+    <h4>Create Your Category Heading:</h4>
+    <%= f.text_field :heading, class: "form-control" %>
+    <br>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
 </div>

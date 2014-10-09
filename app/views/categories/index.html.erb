@@ -1,13 +1,13 @@
-<h2>All Categories</h2>
+<h4>All Categories</h4>
   <ul>
-
   <% @category.each do |category| %>
-  <br>
-  <li><%= link_to(category.heading, category) %>""<%= link_to( 'edit', edit_category_path(category.id)) %>""
-    <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %></li>
+  <li class="inline">
+    <h3><%= link_to(category.heading, category) %></h3>
+    <%= link_to( 'edit', edit_category_path(category.id)) %>
+    <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %>
+  </li>
 
   <% end%>
-  <button>View</button>
 </ul>
 
 
