@@ -4,7 +4,9 @@
   <p><% @category.tasks.each do |task| %></p>
 
   <p>
-      <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %> <%= "ago" if task.datetime && task.datetime < Time.now  %> <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
+      <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
+      <%= "ago" if task.datetime && task.datetime < Time.now  %>
+      <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
       <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
 
       <% end %>
