@@ -1,13 +1,15 @@
 <% if @current_user.present? %>
   <div class="row">
     <% @current_user.categories.each do |category | %>
-      <div class="col-md-4">
-        <h4>Category</h4>
-        <h5><%= category.heading %></h5>
-        <h4>Tasks</h4>
-        <% category.tasks.each do |task| %>
-          <p><%= task.paideuo %><br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
-        <% end %>
+      <div class="col-md-4 task-group">
+        <div>
+          <!-- <h4>Category</h4> -->
+          <h5><%= category.heading %></h5>
+          <!-- <h4>Tasks</h4> -->
+          <% category.tasks.each do |task| %>
+            <p><%= task.paideuo %><br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %></p>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

@@ -39,12 +39,17 @@ ul li {
 }
 
 body {
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     max-height: 100%;
 }
 
 .container {
+  /*margin-top: 80px;*/
   max-width: 960px;
+}
+
+.main-content {
+  margin-top: 100px;
 }
 
 .home-page-block {
@@ -59,3 +64,13 @@ body {
   margin-top: 3em;
 }
 
+.task-group > div {
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+.task-group h5 {
+  text-align: center;
+  text-decoration: underline;
+}
