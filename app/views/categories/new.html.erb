@@ -1,9 +1,11 @@
 <div class="Category_form">
   <h3>Current Categories</h3>
   <div class="task-group well well-lg">
+    <div class="category-words">
     <% @current_user.categories.each do |category| %>
       <h3><em><%= category.heading %><em></h3>
     <% end %>
+  </div>
   </div>
 
 

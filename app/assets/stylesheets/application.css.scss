@@ -68,14 +68,23 @@ body {
 background-color : transparent;
 
 }
+.category-words h3 {
+  color: navy;
+}
 
 .home-page-words {
 background-color : transparent;
 color: white;
 text-align: center;
-margin-top: 200px;
+margin-top: 130px;
+font-size: 100%;
 }
-
+.home-page-words h1 {
+  font-size: 200px;
+}
+.home-page-words h4 {
+  font-size: 30px;
+}
 p {
   color: white;
 }
