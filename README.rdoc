@@ -1,19 +1,32 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Paideuó, Pronounced (pahee-dyoo'-o) means "a child under development with strict training" – properly, to train up a child, so they mature and realize their full potential (development). This requires necessary discipline (training), which includes administering chastisement (punishment).
 
-Things you may want to cover:
+Paideuó is a Task Manager System with integrated accountability partners of your choosing, so that you can't get away scot-free if you dont complete your tasks. Encapsulating the meaning of Paideuó.Make the most of it, to make the most out of yourself.
 
-* Ruby version
+* Ruby version -
 
-* System dependencies
+  'rails', '4.1.6'
+
+* System dependencies -
+
+  gem install 'daemons' #to get access to mail
+
+  gem 'mail'
+
+  gem 'bootstrap-sass'
 
 * Configuration
 
+  To get mail working, the site must be live and connected to a email service provider. Paideuo is currently using sendgrid which comes free with Heroku. Change the configurations in - production.rb to use another provider.
+
 * Database creation
 
+  Database with Postgresql
+
 * Database initialization
+
+
 
 * How to run the test suite
 
@@ -23,6 +36,4 @@ Things you may want to cover:
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
