@@ -2,7 +2,9 @@
 
 Paideuó, Pronounced (pahee-dyoo'-o) means "a child under development with strict training" – properly, to train up a child, so they mature and realize their full potential (development). This requires necessary discipline (training), which includes administering chastisement (punishment).
 
-Paideuó is a Task Manager System with integrated accountability partners of your choosing, so that you can't get away scot-free if you dont complete your tasks. Encapsulating the meaning of Paideuó.Make the most of it, to make the most out of yourself.
+Paideuó is a Task Manager System with integrated accountability partners of your choosing, so that you can't get away scot-free if you dont complete your tasks. Encapsulating the meaning of Paideuó. Make the most of it, to make the most out of yourself.
+
+Paideuó allows you to create a task within a category and nominate a designated accountability partner who will check up on you. If the task was failed to be completed them will receive an email to check up on you.
 
 * Ruby version -
 
@@ -29,6 +31,8 @@ Paideuó is a Task Manager System with integrated accountability partners of you
 
 
 * How to run the test suite
+
+  run on localhost for test version
 
 * Services (job queues, cache servers, search engines, etc.)
 
