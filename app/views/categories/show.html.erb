@@ -1,22 +1,25 @@
 <h4>Category:</h4>
 
 <br>
+  <div class="well well-lg show-page">
+    <h3><%= @category.heading %></h3>
+    <h3><% @category.tasks.each do |task| %></h3>
 
-  <h3><%= @category.heading %></h3>
-  <h3><% @category.tasks.each do |task| %></h3>
-
-  <h3>
-      <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
-      <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
-      <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
-  </h3>
-      <% end %>
+    <h3>
+        <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
+        <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
+        <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
+    </h3>
+        <% end %>
+  </div>
 
 <br>
 <br>
+<div class="well well-lg show-page">
 
-<h3>Add task to this cateogry</h3>
+<h3>Add task to this Category</h3>
 
-<h4><%= link_to('Add Task', new_category_task_path(@category.id))  %></h4>
+<h3><%= link_to('Add Task', new_category_task_path(@category.id))  %></h3>
+</div>
 
 

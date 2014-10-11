@@ -1,14 +1,32 @@
 <h5>All Categories</h5>
 
-  <% @category.each do |category| %>
-      <div class="task-group well well-lg">
-          <div class="row"></end>
-            <h5><%= link_to(category.heading, category) %></h5>
-            <%= link_to( 'edit', edit_category_path(category.id)) %>
-            <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %>
+<% if @current_user.present? %>
+    <div class="row">
+      <% @current_user.categories.each_with_index do |category, index| %>
+      <% if (index % 3) == 0 && index > 0 %>
+    </div><div class="row">
+      <% end %>
+      <div class="col-md-4">
+        <div class="task-group well well-lg">
+         <div class="colour">
+    <!-- <h4>Category</h4> -->
+    <h5><%= link_to(category.heading, category) %></h5>
+    <!-- <h4>Tasks</h4> -->
+    <% category.tasks.each do |task| %>
+    <p><%= task.paideuo %><br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %><br>
+    <%= link_to( 'edit', edit_category_path(category.id)) %>
+    <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %></p>
+    <% end %>
+          </div>
         </div>
-</div>
-  <% end%>
-
-
-
+      </div>
+    <% end %>
+    </div>
+  <% else %>
+    <div class="container">
+      <div class="home-page-words">
+      <h1>Paideuó</h1>
+        <p>Paideuó, Pronounced (pahee-dyoo'-o) means "a child under development with strict training" – properly,<br> to train up a child, so they mature and realize their full potential (development).<br>This requires necessary discipline (training), which includes administering chastisement (punishment).</p>
+      </div>
+    </div>
+<% end %>
