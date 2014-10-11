@@ -2,7 +2,7 @@
 
 <%= form_for(:task, :url => {:controller => 'tasks', :action => 'create'}) do |f| %>
   <p>Task name: <%= f.text_field :paideuo, class: "form-control" %></p>
-  <p>Complete by: <%= f.datetime_select :datetime, class: "form-control" %></p>
+  <p>Complete by: <%= f.datetime_select :datetime %></p>
 
   <%= fields_for(:partner) do |pf| %>
     <%= pf.label :name %>
