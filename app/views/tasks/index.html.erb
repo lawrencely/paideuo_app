@@ -1,8 +1,8 @@
 <h2>Tasks in category</h2>
 <ul>
   <%  @category = params[:category_id] %>
-  <% @tasks = Task.where :id => @category %>
-  <li><% @tasks.each do |task| %></li>
-  <li><%= task.paideuo %></li>
+    <% @tasks = Task.where :id => @category %>
+    <li><% @tasks.each do |task| %></li>
+    <li><%= task.paideuo %></li>
   <% end %>
 </ul>

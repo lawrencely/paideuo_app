@@ -1,4 +1,5 @@
 <h4>Category:</h4>
+
 <br>
 
   <h3><%= @category.heading %></h3>
@@ -6,14 +7,14 @@
 
   <h3>
       <%= task.paideuo %> <br> Due: <%= task.datetime.strftime('%I:%M %p %B %d, %Y') if task.datetime %>
-      <%= "ago" if task.datetime && task.datetime < Time.now  %>
       <%= link_to('edit', edit_category_task_path(@category.id, task.id)) %>
       <%= link_to('delete', category_task_path(@category.id,task.id), :method => :delete, :data => {:confirm => 'Are you sure? Dont give up!'}) %>
-</h3>
+  </h3>
       <% end %>
 
 <br>
 <br>
+
 <h3>Add task to this cateogry</h3>
 
 <h4><%= link_to('Add Task', new_category_task_path(@category.id))  %></h4>

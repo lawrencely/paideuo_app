@@ -1,15 +1,17 @@
 <div class="Category_form">
   <h3>Current Categories</h3>
+
   <div class="task-group well well-lg">
     <div class="category-words">
-    <% @current_user.categories.each do |category| %>
-      <h3><em><%= category.heading %><em></h3>
-    <% end %>
-  </div>
+      <% @current_user.categories.each do |category| %>
+        <h3><em><%= category.heading %><em></h3>
+      <% end %>
+    </div>
   </div>
 
 
   <%= form_for(:category, :url => {:controller => 'categories', :action => 'create'}) do |f| %>
+
     <h4>Create Your Category Heading:</h4>
     <%= f.text_field :heading, class: "form-control" %>
     <br>

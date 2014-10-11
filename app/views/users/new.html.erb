@@ -6,19 +6,16 @@
     <p> Email:</br> <%= f.text_field :email, class: "form-control" %> </p>
     <p> Password:</br> <%= f.password_field :password, class: "form-control" %></p>
     <p> Password Confirmation:</br> <%= f.password_field :password_confirmation, class: "form-control" %></p>
-
     <%= f.submit :Signup, class: "btn btn-primary" %>
-
   <% end %>
   <% if @user.errors.any? %>
-    <ul class="Signup_Errors">
-    <% for message_error in @user.errors.full_messages %>
-      <li>* <%= message_error %></li>
-    <p><%=  flash[:notice] = "Form is invalid" %></p>
-    <p><%=  flash[:color] = "invalid" %></p>
-
-    <% end %>
-    </ul>
+      <ul class="Signup_Errors">
+        <% for message_error in @user.errors.full_messages %>
+          <li>* <%= message_error %></li>
+          <p><%=  flash[:notice] = "Form is invalid" %></p>
+          <p><%=  flash[:color] = "invalid" %></p>
+        <% end %>
+      </ul>
   <% end %>
 </div>
 

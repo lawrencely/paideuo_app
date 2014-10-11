@@ -6,17 +6,10 @@ Paideuó is a Task Manager System with integrated accountability partners of you
 
 Paideuó allows you to create a task within a category and nominate a designated accountability partner who will check up on you. If the task was failed to be completed they will receive an email.
 
-* Ruby version -
-
-  'rails', '4.1.6'
 
 * System dependencies -
 
-  gem install 'daemons' #to get access to mail
-
-  gem 'mail'
-
-  gem 'bootstrap-sass'
+  gem install 'daemons' #to get access to gem 'mail'
 
 * Configuration
 
@@ -28,17 +21,9 @@ Paideuó allows you to create a task within a category and nominate a designated
 
   Database with Postgresql
 
-* Database initialization
-
-
-
 * How to run the test suite
 
   run on localhost for test version
-
-* Deployment instructions
-
-
 
 * ...
 

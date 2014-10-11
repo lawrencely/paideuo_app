@@ -1,6 +1,12 @@
 <h2><%= @user.name %></h2>
+<p>
+  User Since:<%= @user.created_at.strftime '%B %m %Y' %>
+</p>
+<p>
+  Email: <%= @user.email %>
+</p>
 
-<p>User Since:<%= @user.created_at.strftime '%B %m %Y' %></p>
-<p>Email: <%= @user.email %></p>
-Image Here: <%= image_tag @user.image %>
+<p>
+  Image Here: <%= image_tag @user.image %>
+</p>
 

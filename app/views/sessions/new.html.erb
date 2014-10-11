@@ -1,16 +1,16 @@
 <%= form_tag '/login' do %>
 
   <div class="form-group">
-  <%= label_tag :username %>
-  <%= text_field_tag :username, nil, :autofocus => true, class: "form-control" %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username, nil, :autofocus => true, class: "form-control" %>
   </div>
-  <%= label_tag :password %>
-  <%= password_field_tag :password , nil, class: "form-control" %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password , nil, class: "form-control" %>
   <br>
 
   <div class="form-group">
-  <%= submit_tag 'Login', class: "btn btn-primary" %>
+    <%= submit_tag 'Login', class: "btn btn-primary" %>
   </div>
 
-   <% end %>
+<% end %>
 

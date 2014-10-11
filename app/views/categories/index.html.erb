@@ -1,16 +1,18 @@
 <h5>All Categories</h5>
+
 <div class="row">
   <% @category.each do |category| %>
-  <div class="col-md-4">
-    <div class="task-group well well-lg">
-      <div class="row"></end>
-      <h5><%= link_to(category.heading, category) %></h5>
-      <%= link_to( 'edit', edit_category_path(category.id)) %>
-      <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %>
+    <div class="col-md-4">
+      <div class="task-group well well-lg">
+          <div class="row"></end>
+            <h5><%= link_to(category.heading, category) %></h5>
+            <%= link_to( 'edit', edit_category_path(category.id)) %>
+            <%= link_to('delete', category, :method => :delete, :data => { :confirm => 'Are you sure?'}) %>
         </div>
+      </div>
     </div>
-  </div>
-<% end%>
+</div>
+  <% end%>
 
 
 

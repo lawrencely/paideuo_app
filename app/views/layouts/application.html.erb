@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="<%= params[:controller] %>-<%= params[:action] %>">
 <head>
   <title>PaideuoApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,32 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<body id="one">
-<body id="two">
-<nav>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><%= link_to('Paideuó', root_path) %></li>
-                <%== intellinav %>
-            </ul>
+
+  <nav>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><%= link_to('Paideuó', root_path) %></li>
+                    <%== intellinav %>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-</nav>
+  </nav>
 
-<div class="container main-content">
-  <%= yield %>
-</div>
-</body>
-</body>
+  <div class="container main-content">
+      <%= yield %>
+  </div>
+
 </body>
 </html>

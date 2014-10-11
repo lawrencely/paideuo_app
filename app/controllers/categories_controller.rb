@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
-      if @current_user.present?
+    if @current_user.present?
       @category = Category.where :user_id => @current_user.id
     else
       redirect_to root_path
@@ -51,6 +51,7 @@ class CategoriesController < ApplicationController
   end
 
   private
+
   def category_params
     params.require(:category).permit(:heading, :user_id)
   end

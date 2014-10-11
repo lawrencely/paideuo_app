@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     session[:user_id] = nil unless @current_user.present?
   end
 
-  def task_mailer
+  def task_mailer #double loop to get email to be sent
     @users = User.all
     @users.each do |user|
       user.tasks.each do |task|

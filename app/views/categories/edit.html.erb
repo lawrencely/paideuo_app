@@ -1,5 +1,6 @@
 <h2>Create Category</h2>
+
 <%= form_for(@category, :url => { :action => 'update',:controller => 'categories', :id => @category.id}) do |f| %>
-<p>Category Heading:<br> <%= f.text_field :heading, class: "form-control" %></p>
-<%= f.submit class: "btn btn-primary" %>
+  <p>Category Heading:<br> <%= f.text_field :heading, class: "form-control" %></p>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
